@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         FlipSprite();
         Jump();
         Die();
+        
     }
 
     private void Run()
@@ -84,4 +85,23 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            print("Touching platform");
+            this.transform.parent = collision.gameObject.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            print("Leaving platform");
+            this.transform.parent = null;
+        }
+    }
+
 }

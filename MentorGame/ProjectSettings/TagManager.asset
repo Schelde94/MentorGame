@@ -7,6 +7,7 @@ TagManager:
   - Lever1
   - Lever2
   - Lever3
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -47,9 +48,6 @@ TagManager:
   - name: Background
     uniqueID: 1418399511
     locked: 0
-  - name: Hazards
-    uniqueID: 720890669
-    locked: 0
   - name: Interactables
     uniqueID: 3607049841
     locked: 0
@@ -58,4 +56,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2145871005
+    locked: 0
+  - name: Hazards
+    uniqueID: 720890669
     locked: 0
